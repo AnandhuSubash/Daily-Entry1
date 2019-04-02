@@ -9,7 +9,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>Fmart| Login</title>
+    <title>Fmart | Login</title>
 
     <!-- Favicon  -->
     <link rel="icon" href="<?php echo base_url(); ?>img/core-img/f.png">
@@ -64,15 +64,16 @@
             </div>
             <!-- Logo -->
             <div class="logo">
-                <a href="index.html"><img src="<?php echo base_url(); ?>img/core-img/fmart-logo.jpg" alt=""></a>
+                <a href="<?php echo site_url('Fmartctrl/home')?>"><img src="<?php echo base_url(); ?>img/core-img/logo.jpg" alt=""></a>
             </div>
             <!-- Amado Nav -->
             <nav class="amado-nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="product-details.html">Product</a></li>
-                    <li><a href="cart.html">Cart</a></li>
+                    
+                <li><a href="<?php echo site_url('Fmartctrl/home')?>">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Cart</a></li>
                     <li class="active"><a href="checkout.html">Checkout</a></li>
                 </ul>
             </nav>
@@ -104,88 +105,57 @@
                         <div class="checkout_details_area mt-50 clearfix">
 
                             <div class="cart-title">
-                                <h2>Login</h2>
+                                <h2>Login..</h2>
                             </div>
 
-                            <form action="#" method="post">
+                            <form method="post"action="<?php echo site_url("Fmartctrl/login_check"); ?>">
                                 <div class="row">
-                                     <div class="col-md-6 mb-3">
-                                        <input type="text" class="form-control" id="first_name" value="" placeholder="First Name" required>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <input type="text" class="form-control" id="middle_name" value="" placeholder="Middle Name">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <input type="text" class="form-control" id="last_name" value="" placeholder="Last Name" required>
+                                   
+                                    <div class="col-12 mb-3">
+                                        <input type="email" class="form-control" name="email" placeholder="Email" value="">
                                     </div>
                                     <div class="col-12 mb-3">
-                                        <input type="text" class="form-control" id="store" placeholder="Store Name" value="">
+                                        <input type="password" class="form-control" name="password" placeholder="Password" value="">
                                     </div>
+                                   
                                     <div class="col-12 mb-3">
-                                        <input type="text" class="form-control" id="place" placeholder="Place" value="">
+                                        <input type="Submit" class="btn amado-btn mb-15" name="login" placeholder="Login" value="Login">
                                     </div>
-                                    <div class="col-12 mb-3">
-                                        <input type="text" class="form-control" id="town" placeholder="Town" value="">
-                                    </div>
-                                    <div class="col-12 mb-3">
-                                        <select class="w-100" id="State">
-                                        <option value="kl">Kerala</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-12 mb-3">
-                                        <select class="w-100" id="District">
-                                        <option value="al">Alappuzha</option>
-                                        <option value="er">Ernakulam</option>
-                                        <option value="id">Idukki</option>
-                                        <option value="kn">Kannur</option>
-                                        <option value="ks">Kasaragod</option>
-                                        <option value="kl">Kollam</option>
-                                        <option value="kt">Kottayam</option>
-                                        <option value="kz">Kozhikode</option>
-                                        <option value="ma">Malappuram</option>
-                                        <option value="pl">Palakkad</option>
-                                        <option value="pt">Pathanamthitta</option>
-                                        <option value="tv">Thiruvananthapuram</option>
-                                        <option value="ts">Thrissur</option>
-                                        <option value="wa">Wayanad</option>
-
-                                    </select>
-                                    </div>
-                                    
-                                     <div class="col-12 mb-3">
-                                        <input type="text" class="form-control mb-3" id="street_address" placeholder="Address" value="">
-                                    </div>
-                                    <div class="col-12 mb-3">
-                                        <input type="text" class="form-control" id="city" placeholder="Town" value="">
-                                    </div> 
-                                     <div class="col-md-6 mb-3">
-                                        <input type="text" class="form-control" id="zipCode" placeholder="Zip Code" value="">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <input type="text" class="form-control" id="pan" placeholder="PAN" value="">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <input type="text" class="form-control" id="license" placeholder="License Number" value="">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <input type="number" class="form-control" id="phone_number" min="0" placeholder="Phone No" value="">
-                                    </div>  
-                                    <div class="col-12 mb-3">
-                                        <input type="email" class="form-control" id="email" placeholder="Email" value="">
-                                    </div>
-                                    <div class="col-12 mb-3">
-                                        <input type="password" class="form-control" id="password" placeholder="Password" value="">
-                                    </div>
-                                    <div class="amado-btn-group mt-30 mb-100">
-                                        <input type="submit" class="btn amado-btn mb-15" name="login" placeholder="Login" onclick="#">
-                                         <a href="#" class="btn amado-btn mb-15">Regster</a> 
-                                        
-                                    </div>
-                                    
+                                    <?php
+                                    $this->session->flashdata("error");
+                                    ?>
+                                   
+                                </div>
                             </form>
                         </div>
                     </div>
-                    
+                    <!-- <div class="col-12 col-lg-4"> -->
+                        <!-- <div class="cart-summary">
+                            <h5>Cart Total</h5>
+                            <ul class="summary-table">
+                                <li><span>subtotal:</span> <span>$140.00</span></li>
+                                <li><span>delivery:</span> <span>Free</span></li>
+                                <li><span>total:</span> <span>$140.00</span></li>
+                            </ul> -->
+
+                            <!-- <div class="payment-method"> -->
+                                <!-- Cash on delivery -->
+                                <!-- <div class="custom-control custom-checkbox mr-sm-2">
+                                    <input type="checkbox" class="custom-control-input" id="cod" checked>
+                                    <label class="custom-control-label" for="cod">Cash on Delivery</label>
+                                </div> -->
+                                <!-- Paypal -->
+                                <!-- <div class="custom-control custom-checkbox mr-sm-2">
+                                    <input type="checkbox" class="custom-control-input" id="paypal">
+                                    <label class="custom-control-label" for="paypal">Paypal <img class="ml-15" src="<?php echo base_url(); ?>img/core-img/paypal.png" alt=""></label>
+                                </div> -->
+                            <!-- </div>
+
+                            <div class="cart-btn mt-100">
+                                <a href="#" class="btn amado-btn w-100">Checkout</a>
+                            </div>
+                        </div> -->
+                    <!-- </div> -->
                 </div>
             </div>
         </div>
@@ -226,7 +196,7 @@
                     <div class="single_widget_area">
                         <!-- Logo -->
                         <div class="footer-logo mr-50">
-                            <a href="index.html"><img src="<?php echo base_url(); ?>img/core-img/logo2.png" alt=""></a>
+                            <a href="#"><img src="<?php echo base_url(); ?>img/core-img/logo2.png" alt=""></a>
                         </div>
                         <!-- Copywrite Text -->
                         <p class="copywrite"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -244,25 +214,26 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                                 <div class="collapse navbar-collapse" id="footerNavContent">
                                     <ul class="navbar-nav ml-auto">
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="index.html">Home</a>
+                                            <a class="nav-link" href="#">Home</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="shop.html">Shop</a>
+                                            <a class="nav-link" href="#">Shop</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="product-details.html">Product</a>
+                                            <a class="nav-link" href="#">Product</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="cart.html">Cart</a>
+                                            <a class="nav-link" href="#">Cart</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="checkout.html">Checkout</a>
+                                            <a class="nav-link" href="#">Checkout</a>
                                         </li>
                                     </ul>
                                 </div>
                             </nav>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -270,7 +241,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- ##### Footer Area End ##### -->
 
     <!-- ##### jQuery (Necessary for All JavaScript Plugins) ##### -->
-    <script src="<?php echo base_url(); ?>js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="<?php echo base_url(); ?><?php echo base_url(); ?>js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
     <script src="<?php echo base_url(); ?>js/popper.min.js"></script>
     <!-- Bootstrap js -->

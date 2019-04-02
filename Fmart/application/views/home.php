@@ -64,12 +64,15 @@
             </div>
             <!-- Logo -->
             <div class="logo">
-                <a href="index.html"><img src="<?php echo base_url(); ?>img/core-img/logo.jpg" alt=""></a>
+                <a href="<?php echo site_url('Fmartctrl/home')?>"><img src="<?php echo base_url(); ?>img/core-img/logo.jpg" alt=""></a>
             </div>
             <!-- Amado Nav -->
             <nav class="amado-nav">
                 <ul>
-                    <li class="active"><a href="index.html">Home</a></li>
+                 <li><a href="<?php echo site_url('Fmartctrl/home')?>">Home</a></li>
+                    <li><a href="<?php echo site_url('Fmartctrl/login')?>">Login</a></li>
+                    <li><a href="<?php echo site_url('Fmartctrl/register_cust')?>">Register customer</a></li>
+                    <li><a href="<?php echo site_url('Fmartctrl/register_deal')?>">Register Dealer</a></li>
                     <li><a href="shop.html">Shop</a></li>
                     <li><a href="product-details.html">Product</a></li>
                     <li><a href="cart.html">Cart</a></li>
@@ -104,12 +107,12 @@
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="shop.html">
-                        <img src="<?php echo base_url(); ?>img/bg-img/1.jpg" alt="">
+                        <img src="<?php echo base_url(); ?>img/bg-img/couch.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
-                            <p>From $180</p>
-                            <h4>Modern Chair</h4>
+                            <p>From Rs5000</p>
+                            <h4>Couch</h4>
                         </div>
                     </a>
                 </div>
@@ -117,12 +120,12 @@
                 <!-- Single Catagory -->
                 <div class="single-products-catagory clearfix">
                     <a href="shop.html">
-                        <img src="<?php echo base_url(); ?>img/bg-img/2.jpg" alt="">
+                        <img src="<?php echo base_url(); ?>img/bg-img/sofa.jpg" alt="">
                         <!-- Hover Content -->
                         <div class="hover-content">
                             <div class="line"></div>
-                            <p>From $180</p>
-                            <h4>Minimalistic Plant Pot</h4>
+                            <p>From Rs38000</p>
+                            <h4>Sofa Set</h4>
                         </div>
                     </a>
                 </div>

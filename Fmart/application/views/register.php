@@ -64,15 +64,16 @@
             </div>
             <!-- Logo -->
             <div class="logo">
-                <a href="index.html"><img src="<?php echo base_url(); ?>img/core-img/logo.jpg" alt=""></a>
+                <a href="<?php echo site_url('Fmartctrl/home')?>" ><img src="<?php echo base_url(); ?>img/core-img/logo.jpg" alt=""></a>
             </div>
             <!-- Amado Nav -->
             <nav class="amado-nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="product-details.html">Product</a></li>
-                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="<?php echo site_url('Fmartctrl/home')?>">Home</a></li>
+                    <li><a href="<?php echo site_url('Fmartctrl/login')?>">Login</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Cart</a></li>
                     <li class="active"><a href="checkout.html">Checkout</a></li>
                 </ul>
             </nav>
@@ -104,7 +105,7 @@
                         <div class="checkout_details_area mt-50 clearfix">
 
                             <div class="cart-title">
-                                <h2>Register</h2>
+                                <h2>Register | Customer</h2>
                             </div>
 
                             <form action="#" method="post">
@@ -120,7 +121,7 @@
                                     </div>
                                     
                                     <div class="col-12 mb-3">
-                                        <input type="email" class="form-control" name="email" placeholder="Email" value="">
+                                        <input type="email" class="form-control" av-message="invalid email" name="email" placeholder="Email" value="">
                                     </div>
                                     <div class="col-12 mb-3">
                                         <input type="password" class="form-control" name="password" placeholder="password" value="">
